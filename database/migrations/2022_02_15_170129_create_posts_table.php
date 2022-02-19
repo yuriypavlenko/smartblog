@@ -19,6 +19,8 @@ class CreatePostsTable extends Migration
             $table->text('promo');
             $table->longText('body');
             $table->text('img')->nullable();
+            $table->boolean('featured')->default(false);
+            $table->boolean('main_featured')->default(false);
             $table->foreignId('category_id')->constrained();
             $table->foreignId('author')->constrained('users', 'id');
             $table->timestamps();
