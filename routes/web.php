@@ -17,7 +17,7 @@ use \App\Http\Controllers\PostController;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
-Route::get('/view/post/{id}', [PostController::class, 'view'])->name('post.view');
+Route::get('/post/{slug}', [PostController::class, 'view'])->name('post.view');
 
 Auth::routes();
 
