@@ -24,9 +24,9 @@ class PostSeeder extends Seeder
             'featured' => true,
             'main_featured' => true,
             'category_id' => 3,
-            'author'   => 3,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            'author_id'   => 3,
+            'created_at' => Carbon::make('2022-02-16 22:40:10.1')->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::make('2022-02-16 22:40:10.1')->format('Y-m-d H:i:s')
         ]);
 
         DB::table('posts')->insert([
@@ -37,9 +37,9 @@ class PostSeeder extends Seeder
             'img'   => '',
             'featured' => true,
             'category_id' => 1,
-            'author'   => 3,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            'author_id'   => 3,
+            'created_at' => Carbon::make('2022-02-17 09:34:02.1')->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::make('2022-02-17 11:54:02.1')->format('Y-m-d H:i:s')
         ]);
 
         DB::table('posts')->insert([
@@ -50,19 +50,19 @@ class PostSeeder extends Seeder
             'img'   => '',
             'featured' => true,
             'category_id' => 4,
-            'author'   => 3,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            'author_id'   => 3,
+            'created_at' => Carbon::make('2022-02-18 09:34:02.1')->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::make('2022-02-18 09:34:02.1')->format('Y-m-d H:i:s')
         ]);
 
         DB::table('posts')->insert([
             'slug' => 'title-featured-blog-post',
-            'title' => "Title of a featured blog post",
+            'title' => "Title of a blog post",
             'promo' => "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.",
             'body'  => "This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.",
             'img'   => '',
             'category_id' => 12,
-            'author'   => 3,
+            'author_id'   => 3,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);

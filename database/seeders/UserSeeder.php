@@ -17,6 +17,7 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'User',
+            'slug' => 'user',
             'email' => 'user@smartblog.com',
             'password' => Hash::make('12345678'),
             'user_type' => 0 //user, viewer
@@ -24,13 +25,15 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Administrator',
+            'slug' => 'administrator',
             'email' => 'admin@smartblog.com',
             'password' => Hash::make('12345678'),
             'user_type' => 1 //administrator
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Writer',
+            'name' => 'Den Peterson',
+            'slug' => 'den-peterson',
             'email' => 'writer@smartblog.com',
             'password' => Hash::make('12345678'),
             'user_type' => 2 //creator, author of post
