@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\View\Component;
 
 class CategoriesMenu extends Component
@@ -16,7 +17,12 @@ class CategoriesMenu extends Component
      */
     public function __construct()
     {
-        $this->categories = Category::all();
+        $categories = Category::has('posts')->get();
+        if (count($categories) == 0) {
+            $categories = Category::all();
+        }
+
+        $this->categories = $categories;
     }
 
     /**

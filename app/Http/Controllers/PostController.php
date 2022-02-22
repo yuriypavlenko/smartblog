@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function view (Post $post)
+    public function view ($slug)
     {
-        return redirect()->route('welcome');
+        $post = Post::where('slug', $slug)->firstOrFail();
+
+        return view('post', compact('post'));
     }
 }
